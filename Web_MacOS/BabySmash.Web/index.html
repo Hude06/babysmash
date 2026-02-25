@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BabySmash Web</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="topBar">
+        <div id="statusText">Press any key to start smashing.</div>
+        <button id="optionsButton" type="button">Options</button>
+      </div>
+      <div id="gameSurface" tabindex="0" aria-label="BabySmash game surface"></div>
+      <div id="optionsDialog" class="hidden" role="dialog" aria-modal="true" aria-label="Game options">
+        <div class="dialogCard">
+          <h2>Options</h2>
+          <label>
+            Sound mode
+            <select id="soundsSelect">
+              <option value="Speech">Speech</option>
+              <option value="Laughter">Laughter</option>
+              <option value="None">None</option>
+            </select>
+          </label>
+          <label><input id="fadeAwayCheck" type="checkbox" /> Fade away</label>
+          <label>
+            Fade after (seconds)
+            <input id="fadeAfterInput" type="number" min="1" max="60" step="1" />
+          </label>
+          <label>
+            Clear after (figures)
+            <input id="clearAfterInput" type="number" min="5" max="200" step="1" />
+          </label>
+          <label><input id="facesOnShapesCheck" type="checkbox" /> Faces on shapes</label>
+          <label><input id="forceUppercaseCheck" type="checkbox" /> Force uppercase</label>
+          <div class="dialogActions">
+            <button id="saveOptionsButton" type="button">Save</button>
+            <button id="cancelOptionsButton" type="button">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
