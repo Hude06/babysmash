@@ -187,3 +187,16 @@ FakesAssemblies/
 
 test-artifact/
 screenshot1.jpg
+# Electron / build outputs
+dist/
+out/
+release/
+*.dmg
+*.zip
+*.AppImage
+*.exe
+*.msi
+
+# Electron builder caches
+*.blockmap
+*.snap
